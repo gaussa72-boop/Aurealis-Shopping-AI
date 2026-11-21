@@ -1,0 +1,9 @@
+{
+  "name": "aurealis-shopping-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aurealis Shopping AI storefront starter",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
