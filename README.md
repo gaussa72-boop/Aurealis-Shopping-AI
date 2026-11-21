@@ -1,22 +1,21 @@
-# Aurealis Shopping AI
+# AUREALIS SHOPPING AI
 
-Independent Node.js web service starter.
+Aurealis-branded marketplace starter, deployed as the existing independent Render service.
 
-## Run
+## Included in this release
+- Responsive marketplace storefront with search, category filters, sorting, product cards and cart drawer.
+- Demo product catalog served by `GET /api/products`.
+- Credit preview rule: standard accounts accrue 3% of the cart merchandise subtotal; Premium accounts accrue 0%.
+- Health endpoint: `/health`.
 
-- `npm start`
-- Health endpoint: `/health`
+## Important integration status
+The current catalog is illustrative demo data. Search, cart and credits are a front-end preview; there is not yet a persistent customer database, real account authentication, Premium entitlement verification, credit ledger, supplier feed, payment provider, order management, shipping or returns integration. The checkout intentionally does not place orders or collect payments. Do not treat the displayed demo credits as redeemable balances.
 
-## Current status
+## Next production integrations
+1. Secure authentication and server-verified Premium entitlements.
+2. Database-backed products, carts, orders and immutable credit ledger.
+3. Supplier/catalog APIs and verified images, prices, inventory and shipping.
+4. Payment provider, tax/shipping calculation, order confirmation and fulfillment APIs.
+5. Admin and seller tools with permissions and audit trail.
 
-The repository contains the first responsive storefront interface and a minimal HTTP server. Product cards are explicitly illustrative. No live product search, accounts, premium billing, checkout, supplier ordering, email approval workflow, or shipment tracking is active yet.
-
-## Next integrations
-
-1. Product discovery providers and supplier feeds.
-2. Price normalization and a configurable 10% markup, with tax/shipping shown separately.
-3. Database, authentication, user-owned wishlists and premium entitlements.
-4. Checkout and an explicit approval step before any supplier order.
-5. Supplier-specific order APIs, confirmation emails, and tracking events.
-
-Never place API keys in frontend code. Configure secrets as Render environment variables.
+Never put API keys in frontend code. Configure secrets as Render environment variables. The marketplace uses its own branding and does not use Amazon's logo or proprietary assets.
