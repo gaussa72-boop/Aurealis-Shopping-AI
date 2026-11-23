@@ -63,6 +63,15 @@ footer{max-width:1220px;margin:0 auto 28px;background:#090711;color:#a993ba;bord
 #humanitarian-donation-panel{background:#140d20!important;border-color:#b65be4!important}
 @media(max-width:760px){.top{margin-top:0;border-radius:0;grid-template-columns:1fr auto}.subnav{gap:17px}.hero{min-height:360px}.hero>div:first-child{max-width:65%}.hero:after{right:-8%;top:46%;width:55%;height:34%;opacity:.75}.hero:before{right:12%;top:39%;transform:scale(.7) rotateX(64deg) rotateZ(-9deg)}.hero .orb{right:16%;top:43%;font-size:75px}.hero .orb:after{display:none}.layout{grid-template-columns:1fr}.filters{display:flex;gap:10px;overflow:auto}.filters button{white-space:nowrap;width:auto;padding:7px 10px;border:1px solid #4b3260;border-radius:30px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding-top:18px}}
 @media(max-width:420px){.hero>div:first-child{max-width:80%}.hero:after{opacity:.4}.hero:before{opacity:.6}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.product{padding:9px}.photo{height:115px}}
+
+.coinomics{margin:24px 0;padding:clamp(20px,3vw,34px);border:1px solid #8b4eb766;border-radius:17px;background:radial-gradient(ellipse at 80% 0%,#3d155c 0%,#191025 42%,#0e0b17 100%);box-shadow:0 18px 55px #0005;color:#f7efff}
+.coinomics-head{max-width:800px}.coin-kicker{color:#d58bff;font-size:10px;letter-spacing:.22em;font-weight:800}.coinomics h2{font-size:clamp(23px,3vw,34px);line-height:1.12;margin:10px 0;color:#fff}.coinomics-head>p{color:#c7b7d8;line-height:1.65}
+.coinomics-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:22px 0}
+.coinomics-grid article{padding:19px;border:1px solid #68448788;border-radius:13px;background:linear-gradient(145deg,#21132fdd,#11101c)}
+.coin-number{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#57217a;color:#f2c8ff;font-size:12px;font-weight:800}
+.coinomics-grid h3{color:#fff;margin:13px 0 7px;font-size:16px}.coinomics-grid p{color:#c1b1d1;font-size:13px;line-height:1.65;margin:0}
+.coinomics-note{padding:15px 17px;border:1px solid #a77b3d88;border-radius:11px;background:#251b17;color:#f2d8ae;font-size:12px;line-height:1.65}
+@media(max-width:760px){.coinomics-grid{grid-template-columns:1fr}.coinomics{padding:19px}}
 </style></head>
 <body>
 <header class="top">
@@ -82,6 +91,17 @@ footer{max-width:1220px;margin:0 auto 28px;background:#090711;color:#a993ba;bord
 <section class="hero"><div><div class="kicker">Aurealis Shopping Intelligence</div><h1>Alles entdecken.<br>Intelligenter auswählen.</h1><p>Eine zentrale Shopping-KI für Produktsuche, Angebotsvergleich und Marketplace: Produkte entdecken, Verkäufer finden und Einkäufe transparent abwickeln.</p></div><div class="orb">✦</div></section>
 <section class="creditbox" style="margin-top:18px"><div><strong>✦ Aurealis AI Shopping Agent</strong><p>Beschreibe, was du suchst. Die KI soll Händlerangebote vergleichen, Verfügbarkeit und Versand prüfen und die günstigsten verifizierten Gesamtpreise priorisieren.</p></div><button class="add" type="button" onclick="document.querySelector('#searchInput').focus()">Suche starten</button></section>
 <section class="creditbox"><div><strong>Marketplace für Käufer & Verkäufer</strong><p>Verkäuferprofile, eigene Produktangebote, Ankaufsgesuche und Kundenbewertungen. Verkäufer- und Profilverwaltung wird erst mit Konten-Backend aktiv.</p></div><span class="tag">Marketplace-Modul</span></section>
+<section class="coinomics" id="product-coins">
+ <div class="coinomics-head"><span class="coin-kicker">AUREALIS · PRODUCT COINS</span><h2>Produkte gemeinsam besitzen. Anteile transparent verwalten.</h2>
+ <p>Für jedes zugelassene Produkt kann ein eigener Produkt-Coin mit einer klar definierten Gesamtmenge und nachvollziehbaren Anteilen angelegt werden.</p></div>
+ <div class="coinomics-grid">
+  <article><span class="coin-number">01</span><h3>Produkt-Coin</h3><p>Jeder Coin ist einem konkreten Produkt, einem geprüften Händlerangebot und einer festgelegten Gesamtmenge zugeordnet. Nutzeranteile werden in einer transparenten Demo-Übersicht dargestellt.</p></article>
+  <article><span class="coin-number">02</span><h3>30 % Betreiberanteil</h3><p>Das vorgeschlagene Tokenmodell reserviert 30 % der gesamten Coin-Menge als ausgewiesenen Betreiber- und Urheberanteil für AUREALIS. Die übrigen 70 % sind im Konzept für die Community vorgesehen.</p></article>
+  <article><span class="coin-number">03</span><h3>20 % humanitäre Zwecke</h3><p>Zusätzlich sollen 20 % der Bruttoeinnahmen aus tatsächlichen Coin-Transaktionen für humanitäre Zwecke bereitgestellt und mit Belegen transparent dokumentiert werden.</p></article>
+ </div>
+ <div class="coinomics-note"><strong>Wichtig – derzeit nur Konzept/Demo:</strong> Es werden aktuell keine echten Aktien, Wertpapiere oder handelbaren Produktanteile ausgegeben. Kauf, Verkauf, Gewinnbeteiligung, Einlösung und Eigentumsübertragung sind deaktiviert. Eine Aktivierung erfolgt erst nach rechtlicher Prüfung, erforderlichen Erlaubnissen, geprüften Händlerverträgen, Verwahrung, Zahlungsabwicklung und transparenter Festlegung, wie Gebühren, Steuern, Rückgaben und Verluste behandelt werden. Der 30-%-Anteil ist eine geplante Modellregel und kein bereits erworbenes Eigentum oder garantierter Ertrag.</div>
+</section>
+
 <div class="toolbar" id="catalog"><div><h2>Beliebte Produkte</h2><p id="resultLabel">Ausgewählte Demo-Produkte · noch keine Live-Händlerangebote</p></div><select id="sortSelect" onchange="renderProducts()"><option value="featured">Empfohlen</option><option value="low">Preis aufsteigend</option><option value="high">Preis absteigend</option><option value="name">Name A–Z</option></select></div>
 <div class="layout">
 <aside class="filters"><h3>Kategorien</h3><button class="active" data-cat="Alle" onclick="chooseCategory('Alle')">Alle Produkte</button><button data-cat="Technik" onclick="chooseCategory('Technik')">Technik</button><button data-cat="Wohnen" onclick="chooseCategory('Wohnen')">Wohnen</button><button data-cat="Mode" onclick="chooseCategory('Mode')">Mode</button><button data-cat="Sport" onclick="chooseCategory('Sport')">Sport & Freizeit</button><button data-cat="Beauty" onclick="chooseCategory('Beauty')">Beauty</button><div class="smallnote">Kategorien filtern den lokalen Beispielkatalog. Händlerfeeds folgen nach API-Anbindung.</div></aside>
