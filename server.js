@@ -1,4 +1,5 @@
 const http = require("node:http");
+const { handleAgentBridge } = require("./agent-bridge.cjs");
 const fs = require("node:fs");
 const path = require("node:path");
 const root = path.join(__dirname, "public");
@@ -13,7 +14,8 @@ const products = [
   {id:"aur-008",name:"Skincare Essentials Set",brand:"Pure Ritual",category:"Beauty",price:34.90,rating:"4,5",emoji:"🧴",description:"Pflege-Set für die tägliche Routine"}
 ];
 const mime = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".svg":"image/svg+xml" };
-const server = http.createServer((req,res) => {
+const server = http.createServer(async (req,res) => {
+  if (await handleAgentBridge(req,res)) return;
   const url = new URL(req.url, "http://localhost");
   if (url.pathname === "/health") { res.writeHead(200, {"content-type":"application/json"}); return res.end(JSON.stringify({ok:true,service:"aurealis-shopping-ai",catalog:"demo"})); }
   if (url.pathname === "/api/products" && req.method === "GET") {
