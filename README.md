@@ -19,3 +19,10 @@ The current catalog is illustrative demo data. Search, cart and credits are a fr
 5. Admin and seller tools with permissions and audit trail.
 
 Never put API keys in frontend code. Configure secrets as Render environment variables. The marketplace uses its own branding and does not use Amazon's logo or proprietary assets.
+
+## Aurealis Finance integration
+- The storefront navigation links to the authenticated ULTIMA account finance center at `https://ultima-membership-api.onrender.com/portal#finance-center`.
+- Invoice records, additional collection/reminder costs, payment status and personal financing plans are stored per authenticated ULTIMA account in the central membership database.
+- The superadmin view at `/admin/finance` exposes aggregate counts only; individual mailbox contents and invoice details remain private to each account.
+- Mail-provider integration is not yet live. Gmail, Outlook, iCloud Mail and Hostinger Mail require provider-specific OAuth client configuration, callback validation, encrypted refresh-token storage, least-privilege scopes and an end-to-end security test before messages or attachments can be imported. Never ask users for mailbox passwords or place OAuth secrets in frontend code.
+- Until OAuth is enabled, users can add invoices manually and manage paid status, collection/reminder fees and a personal repayment budget in the finance center.
